@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        
+        int max = Math.max(a, Math.max(b, c));
+        
+        int count = 0;
+        if (a == max) count++;
+        if (b == max) count++;
+        if (c == max) count++;
+        
+        if (count > 1) {
+            System.out.println("There is a tie for the greatest number");
+        } else {
+            System.out.println(max + " is the greatest");
+        }
+    }
+}
