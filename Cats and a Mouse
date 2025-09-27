@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Solution {
+    public static String catAndMouse(int x, int y, int z) {
+        int distA = Math.abs(z - x);
+        int distB = Math.abs(z - y);
+
+        if (distA < distB) {
+            return "Cat A";
+        } else if (distB < distA) {
+            return "Cat B";
+        } else {
+            return "Mouse C";
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int q = sc.nextInt();  // number of queries
+
+        for (int i = 0; i < q; i++) {
+            int x = sc.nextInt(); // Cat A position
+            int y = sc.nextInt(); // Cat B position
+            int z = sc.nextInt(); // Mouse position
+            System.out.println(catAndMouse(x, y, z));
+        }
+    }
+}
