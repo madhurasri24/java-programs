@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        List<Integer> evens = new ArrayList<>();
+        List<Integer> odds = new ArrayList<>();
+        for (int num : arr) {
+            if (num % 2 == 0) {
+                evens.add(num);
+            } else {
+                odds.add(num);
+            }
+        }
+        Collections.sort(evens, Collections.reverseOrder());
+        Collections.sort(odds);
+        List<Integer> result = new ArrayList<>();
+        result.addAll(evens);
+        result.addAll(odds);
+        for (int i = 0; i < result.size(); i++) {
+            System.out.print(result.get(i));
+            if (i < result.size() - 1) {
+                System.out.print(" ");
+            }
+        }
+    }
+}
