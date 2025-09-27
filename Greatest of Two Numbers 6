@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        if(num1 > num2){
+            System.out.print(num1 + " is greater");
+        }else if(num2 > num1){
+            System.out.print(num2 + " is greater" );
+        }else{
+            System.out.print("Both are equal");
+        }
+        
+    }
+}
