@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int sum = a + b;
+        int diff = a - b;
+        int pro = a * b;
+        int quo = a / b;
+        int rem = a % b;
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + pro);
+        System.out.println("Quotient: " + quo);
+        System.out.println("Remainder: " + rem);
+        
+        
+    }
+}
