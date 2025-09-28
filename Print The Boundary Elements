@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class BoundaryElements {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+        System.out.print("Enter number of columns: ");
+        int cols = sc.nextInt();
+
+        int[][] arr = new int[rows][cols];
+        System.out.println("Enter elements of the 2D array:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.print("Boundary elements are: ");
+
+        // Top row
+        for (int j = 0; j < cols; j++) {
+            System.out.print(arr[0][j] + " ");
+        }
+
+        // Right column (excluding top row)
+        for (int i = 1; i < rows; i++) {
+            System.out.print(arr[i][cols - 1] + " ");
+        }
+
+        // Bottom row (excluding last element if more than 1 row)
+        if (rows > 1) {
+            for (int j = cols - 2; j >= 0; j--) {
+                System.out.print(arr[rows - 1][j] + " ");
+            }
+        }
+
+        // Left column (excluding top and bottom elements if more than 1 column)
+        if (cols > 1) {
+            for (int i = rows - 2; i > 0; i--) {
+                System.out.print(arr[i][0] + " ");
+            }
+        }
+    }
+}
